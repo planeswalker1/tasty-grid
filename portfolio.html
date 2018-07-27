@@ -1,0 +1,23 @@
+---
+layout: default
+mainclass: main--projects
+gridclass: grid--portfolio
+title: Portfolio
+---
+<div class="intro">
+    <h1 class="intro__heading">Front End Projects</h1>
+    <div class="{{ page.gridclass }}">
+      {% for project in site.data.portfolio %}
+        <div class="grid__item">
+          <h4>{{ project.heading }}</h4>
+            <p class="grid__meta">{{ project.meta }}</p>
+            <p> {{ project.tech}}</p>
+            <div class="grid__flex">
+              <p><a href="{{ project.source }}">Demo</a></p>
+              <p>{{ project.date }}</p>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+</div>
+

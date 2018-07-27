@@ -10,9 +10,19 @@
 </head>
 <body>
   <div class="container">
+    <header>
+      {% include nav.html %}
+    </header>
     <main {% if page.mainclass %}class="{{ page.mainclass }}"{% endif %}>
       {{ content }}
     </main>
+    <footer>
+      <nav>
+        <ul class="nav__list--footer">
+          <li class="nav__item--footer"><a class="nav__link--footer" href="https://github.com/planeswalker1">Github</a></li>
+        </ul>
+      </nav>
+    </footer>
   </div>
 </body>
 </html>
