@@ -6,3 +6,113 @@
   max-width: 1360px;
   min-height: 100vh;
 }
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__heading--header {
+  color: #fff;
+  margin-left: 20px;
+}
+
+.nav__list--header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 50px;
+  list-style-type: none;
+  margin-right: 20px;
+  padding: 0;
+}
+
+.main--home,
+.main--contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 20px;
+}
+
+.main--projects {
+  padding: 20px 0;
+}
+
+.intro {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.grid--portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 300px;
+  grid-gap: 20px;
+  grid-auto-rows: 300px;
+  grid-auto-columns: 300px;
+  align-content: center;
+  justify-content: start;
+}
+
+.grid__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid__meta {
+  flex: 1;
+}
+
+.grid__flex {
+
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav__list--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .grid--portfolio {
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(3, 300px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__nav {
+    flex-direction: column;
+  }
+
+  .nav__heading--header {
+    margin: 0;
+    margin-top: 1em;
+  }
+  
+  .nav__list--header {
+    margin-right: 0;
+  }
+
+  .main--home,
+  .main--about,
+  .main--contact,
+  .main--projects {
+    padding: 20px;
+  }
+
+  .grid--portfolio {
+    justify-content: center;
+  }
+}

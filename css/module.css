@@ -1,0 +1,24 @@
+.nav__item--header {
+  margin: 0 10px;
+}
+
+.nav__link--header {
+  color: #fff;
+}
+
+.grid__item {
+  /* border: 1px solid black; */
+  /* border-radius: 20px; */
+  box-shadow: 0 1px 3px 0 #d4d4d5,
+                      0 0 0 1px #d4d4d5;
+  padding: 20px;
+}
+
+.image--home {
+  width: 400px;
+  margin-right: 20px;
+}
+
+.nav__item--footer {
+  margin: 0 20px;
+}
