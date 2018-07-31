@@ -1,10 +1,12 @@
 -
+  image: site.jpg
   heading: My Website
   meta: A website about me
   tech: HTML, CSS, Jekyll
   source: https://planeswalker1.github.io
   date: July 2018
 -
+  image: font.jpg
   heading: Typography
   meta: A website about typography
   tech: HTML, CSS, Jekyll
@@ -12,6 +14,7 @@
   date: July 2018
 
 -
+  image: watch.jpg
   heading: Watch
   meta: A website about music
   tech: HTML, CSS, Jekyll, javaScript, Tilt.js

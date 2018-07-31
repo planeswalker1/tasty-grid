@@ -1,4 +1,4 @@
-html: {
+html {
   box-sizing: border-box;
 }
 
@@ -12,26 +12,30 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   margin: 0;
+  color: #222;
 }
 
+/* header styles */
 header {
   background-color: #222;
 }
 
-main {
-  flex: 1;
+h1,
+h2,
+h4 {
+  color: #000;
 }
 
-h1,
-.grid__item > p,
-.grid__item > h4 {
-  margin-top: 0;
+/* main styles */
+main {
+  flex: 1;
 }
 
 svg {
   height: 1em;
 }
 
+/* footer styles */
 footer {
   border-top: 1px solid #222;
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}Daniel Munoz{% if page.titleafter %} · {{ page.titleafter }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} · {% endif %}Daniel Munoz{% if page.title-after %} · {{ page.titleafter }}{% endif %}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@
     <header>
       {% include nav.html %}
     </header>
-    <main {% if page.mainclass %}class="{{ page.mainclass }}"{% endif %}>
+    <main {% if page.main-class %}class="{{ page.main-class }}"{% endif %}>
       {{ content }}
     </main>
     <footer>
@@ -24,5 +24,6 @@
       </nav>
     </footer>
   </div>
+  {% if page.url contains 'portfolio' %}<script src="{{ site.baseurl }}/js/main.js" defer></script>{% endif %}
 </body>
 </html>
