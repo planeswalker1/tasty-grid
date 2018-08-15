@@ -1,6 +1,6 @@
 # _tasty-grid_
 
-#### _A website made using Jekyll to pracitce CSS grid, 08.01.2018_
+#### _A website made using Jekyll to pracitce CSS grid, 08.15.2018_
 
 #### By _**planeswalker1**_
 
