@@ -2,14 +2,15 @@
 layout: default
 title: Portfolio
 main-class: main--portfolio
+meta:  Discover some responsive websites.
 ---
 
-<div class="intro">
-    <h1 class="intro__heading">Front End Projects</h1>
+<div class="main__container">
+    <h1 class="container__heading">Front End Projects</h1>
     <div class="grid--portfolio">
       {% for project in site.data.portfolio %}
         <div class="grid__item">
-          <img class="item__image" src="{{ site.baseurl }}/images/{{ project.image }}" alt="Photo of {{ project.meta }}">
+          <a href="{{ site.baseurl }}{{ project.source }}"><img class="item__image" src="{{ site.baseurl }}/images/{{ project.image }}" alt="Photo of {{ project.meta }}"></a>
           <div class="item__content">
               <h4>{{ project.heading }}</h4>
               <p class="item__meta">{{ project.meta }}</p>

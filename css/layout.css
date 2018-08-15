@@ -1,3 +1,4 @@
+/* container styles */
 .container {
   display: flex;
   flex-direction: column;
@@ -8,7 +9,6 @@
 }
 
 /* header styles */
-
 .header__nav {
   display: flex;
   align-items: center;
@@ -32,9 +32,7 @@
 }
 
 /* main styles */
-
-.main--home,
-.main--contact {
+.main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -42,15 +40,31 @@
   padding-top: 20px;
 }
 
-.main--portfolio {
+.main--portfolio,
+.main--blog,
+.main--404 {
   padding: 20px 0;
 }
 
-.intro {
+.main__container {
   margin: 0 auto;
   width: 80%;
 }
 
+.main__container--med {
+  width: 50%;
+}
+
+/* blog styles */
+.main__container--blog {
+  display: flex;
+}
+
+.container__post {
+    width: 70%;
+}
+
+/* portfolio styles */
 .grid--portfolio {
   display: grid;
   grid-template-columns: repeat(3, 300px);
@@ -85,7 +99,6 @@
 }
 
 /* footer styles */
-
 .nav__list--footer {
   display: flex;
   justify-content: center;
@@ -95,15 +108,43 @@
 }
 
 /* media screen styles */
-
 @media screen and (max-width: 960px) {
+  /* grid styles */
   .grid--portfolio {
     grid-template-columns: 300px;
     grid-template-rows: repeat(3, 400px);
   }
+  
+  /* main styles */
+  .main__container--med {
+    width: 80%;
+  }
+
+  .main__container--blog {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* blog styles */
+  .container__post {
+    order: 2;
+    width: 100%;
+  }
+
+  .blog__meta {
+    width: 100%;
+  }
+
+  .archive {
+    height: unset;
+    order: 1;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  /* header styles */
   .header__nav {
     flex-direction: column;
   }
@@ -116,15 +157,31 @@
   .nav__list--header {
     margin-right: 0;
   }
-
-  .main--home,
-  .main--about,
-  .main--contact,
-  .main--portfolio {
+  
+  /* main styles */
+  .main,
+  .main--portfolio,
+  .main--404,
+  .main--blog {
     padding: 20px;
   }
 
+  .main__container--med {
+    width: 100%;
+  }
+
+  .main__container--blog {
+    margin: 0;
+    width: 100%;
+  }
+  
+  /* grid styles */
   .grid--portfolio {
     justify-content: center;
+  }
+
+  /* blog styles */
+  .archive {
+    padding: 10px;
   }
 }

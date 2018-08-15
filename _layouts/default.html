@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}Daniel Munoz{% if page.title-after %} · {{ page.titleafter }}{% endif %}</title>
+  <meta name="description" content="{{ page.meta }}">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}Daniel Munoz{% if page.title-after %} - {{ page.title-after }} - Long Beach, California{% endif %}</title>
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
@@ -13,12 +15,14 @@
     <header>
       {% include nav.html %}
     </header>
-    <main {% if page.main-class %}class="{{ page.main-class }}"{% endif %}>
+    <main class="main {% if page.main-class %}{{ page.main-class }}{% endif %}">
       {{ content }}
     </main>
     <footer>
       <nav>
         <ul class="nav__list--footer">
+          <li class="nav__item--footer"><a class="nav__link--footer" href="{{ site.baseurl }}/blog">Blog</a></li>
+          <li class="nav__item--footer"><a class="nav__link--footer" href="{{ site.baseurl }}/contact">Contact</a></li>
           <li class="nav__item--footer"><a class="nav__link--footer" href="https://github.com/planeswalker1">Github</a></li>
         </ul>
       </nav>
